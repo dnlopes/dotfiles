@@ -4,11 +4,10 @@ SPACESHIP_PROMPT_FIRST_PREFIX_SHOW=false
 SPACESHIP_RPROMPT_FIRST_PREFIX_SHOW=true
 
 SPACESHIP_TIME_SHOW=true
-SPACESHIP_TIME_FORMAT='%D{%H:%M:%S}'
+SPACESHIP_TIME_FORMAT='%D{%Hh%Mm%Ss}'
 
 SPACESHIP_USER_SHOW=never
 SPACESHIP_DIR_TRUNC_REPO=true
-SPACESHIP_ASYNC_SHOW_COUNT=true
 
 SPACESHIP_KUBECTL_SHOW=true
 
@@ -18,14 +17,14 @@ SPACESHIP_PROMPT_ORDER=(
   dir            # Current directory section
   async
   git            # Git section (git_branch + git_status)
-  async
-  kubectl        # Kubectl context section
-  async
-  aws            # Amazon Web Services section
   line_sep       # Line break
   char           # Prompt character
 )
 
 # right prompt
 SPACESHIP_RPROMPT_ORDER=(
+  async
+  aws            # Amazon Web Services section
+  async
+  kubectl        # Kubectl context section
 )

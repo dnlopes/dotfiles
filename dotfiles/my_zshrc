@@ -6,8 +6,6 @@ dotFilesFolder="$HOME/.dotfiles"
 
 ##############################
 # start of miscellaneous configurations
-autoload -Uz compinit
-compinit
 [ -f $HOME/.fzf.zsh ] && source ~/.fzf.zsh
 # end of miscellaneous configurations
 ##############################
@@ -34,4 +32,11 @@ export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 # end PyEnv stuff
+##############################
+
+##############################
+# start of final miscellaneous configurations
+autoload -U compinit
+compinit
+# end of final miscellaneous configurations
 ##############################

@@ -51,7 +51,7 @@ function installUpdateFormulas() {
     brew install kubernetes-cli
     brew install kyverno
     brew install chainsaw
-    brew install localstack
+    brew install localstack/tap/localstack-cli
     brew install vim
     brew install ykman    
     brew install yq    

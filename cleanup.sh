@@ -30,8 +30,7 @@ function echoWarning() {
 function main() {
     echoInfo "starting system cleanup" && echo ""
 
-    rm -rf $HOME/.zcompdump*
-    rm -rf $dotFilesBackupLocation/*
+    rm -f $dotFilesBackupLocation/*
     brew cleanup
 
     echo "" && echoSuccess "system cleanup executed successfully"

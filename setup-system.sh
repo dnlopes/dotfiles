@@ -33,14 +33,18 @@ function installUpdateCasks() {
     brew install --cask firefox
     brew install --cask font-fira-code
     brew install --cask iterm2
-    brew install --cask maccy
     brew install --cask rancher
     brew install --cask spotify
     brew install --cask visual-studio-code
+    brew install --cask maccy
 }
 
 function installUpdateFormulas() {
-    brew update
+    #brew update
+    brew install coreutils
+    brew install pinentry-mac
+    brew install pre-commit
+    brew install fzf
     brew install fluxcd/tap/flux
     brew install awscli
     brew install azure-cli
@@ -55,8 +59,15 @@ function installUpdateFormulas() {
     brew install gnupg
     brew install helm
     brew install k3d
+    brew install k9s
     brew install jq
     brew install pyenv
+    brew install starship
+    brew install opentofu
+    brew install pre-commit
+    brew install trivy
+    brew install operator-sdk
+    brew install packer
 }
 # end of main methods
 ########################

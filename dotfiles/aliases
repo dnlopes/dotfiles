@@ -14,8 +14,8 @@ fi
 alias ls="command ls ${colorflag}"
 
 # List all files colorized in long format
-alias l="ls -lF ${colorflag}"
-alias la="ls -la ${colorflag}"
+alias l="ls -lFh ${colorflag}"
+alias la="ls -lah ${colorflag}"
 
 # git aliases
 alias gaa="git add --all"

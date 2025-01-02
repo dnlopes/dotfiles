@@ -15,3 +15,11 @@ alias ls="command ls ${colorflag}"
 
 # List all files colorized in long format
 alias l="ls -lF ${colorflag}"
+
+# git aliases
+alias gaa="git add --all"
+alias gpsup="git push --set-upstream origin $(git_current_branch)"
+alias gl="git pull"
+alias gf="git fetch"
+alias gcmsg="git commit -m"
+alias gs="git status"

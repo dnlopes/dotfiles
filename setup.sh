@@ -104,6 +104,7 @@ function main() {
     echoInfo "starting distributing dotfiles and common configurations" && echo ""
     mkdir -p $dotfilesFolder
     mkdir -p $dotFilesBackupLocation
+    mkdir -p $HOME/.config
     checkVariables
 
     # replace variables and copy files
@@ -121,6 +122,7 @@ function main() {
     copyFile "gpg-agent.conf" "$HOME/.gnupg/gpg-agent.conf"
     copyFile "gpg.conf" "$HOME/.gnupg/gpg.conf"
     copyFile "spaceshiprc.zsh" "$HOME/.spaceshiprc.zsh"
+    copyFile "starship.toml" "$HOME/.config/starship.toml"
 
     echo "" && echoSuccess "dotfiles and common configurations distributed successfully"
 

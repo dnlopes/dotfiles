@@ -59,13 +59,18 @@ function main() {
     checkVariables
 
     # run for files
-    runForfile ".gitconfig" "$HOME/.gitconfig"
-    runForfile ".vimrc" "$HOME/.vimrc"
+    runForfile "gitconfig" "$HOME/.gitconfig"
+    runForfile "gitignore" "$HOME/.gitignore"
+    runForfile "vimrc" "$HOME/.vimrc"
     runForfile "aliases" "$dotfilesFolder/aliases"
     runForfile "exports" "$dotfilesFolder/exports"
     runForfile "secrets" "$dotfilesFolder/secrets"
     runForfile "my_zshrc" "$dotfilesFolder/my_zshrc"
     runForfile "aws_config" "$HOME/.aws/config"
+    runForfile "gpg-agent.conf" "$HOME/.gnupg/gpg-agent.conf"
+    runForfile "gpg.conf" "$HOME/.gnupg/gpg.conf"
+    runForfile "ssh_config" "$HOME/.ssh/config"
+    runForfile "spaceshiprc.zsh" "$HOME/.spaceshiprc.zsh"
 }
 
 main

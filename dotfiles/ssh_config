@@ -1,0 +1,12 @@
+Host	blog
+	HostName		blog.internal.siggilum.com
+	User			dnl
+	StrictHostKeyChecking	no
+	IdentityFile		~/.ssh/blog.pem
+	UserKnownHostsFile	/dev/null
+
+Host github
+	User git
+	HostName github.com
+	IdentityFile ~/.ssh/yubikey.shim.pk
+	IdentitiesOnly yes

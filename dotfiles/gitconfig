@@ -1,7 +1,7 @@
 [user]
 	name = David Lopes
-	email = $GITCONFIG_EMAIL
-	signingkey = $GITCONFIG_SIGNING_KEY
+	email = $DOTFILES_GITCONFIG_EMAIL
+	signingkey = $DOTFILES_GITCONFIG_SIGNING_KEY
 [init]
 	defaultBranch = main
 [pull]

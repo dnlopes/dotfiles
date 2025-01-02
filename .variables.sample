@@ -1,5 +1,0 @@
-export GITCONFIG_EMAIL=""
-export GITCONFIG_SIGNING_KEY=""
-export GITHUB_PAT=""
-export LOCALSTACK_PRO_TOKEN=""
-export YUBIKEY_MFA_ARN=""

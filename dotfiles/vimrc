@@ -1,2 +1,4 @@
+set nu
 syntax on
-set number
+colorscheme evening
+set backspace=indent,eol,start

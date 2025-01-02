@@ -2,9 +2,9 @@
 [profile dnlopes]
 region = eu-west-1
 output = json
-mfa_serial = $YUBIKEY_MFA_ARN
 credential_process = aws-vault export --format=json dnlopes
-mfa_process = ykman oath accounts code --single $YUBIKEY_MFA_ARN
+mfa_serial = $DOTFILES_YUBIKEY_MFA_ARN
+mfa_process = ykman oath accounts code --single $DOTFILES_YUBIKEY_MFA_ARN
 
 [profile tpam-prd-ro]
 source_profile = dnlopes

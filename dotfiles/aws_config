@@ -1,0 +1,55 @@
+# added with 'aws-vault add dnlopes'
+[profile dnlopes]
+region = eu-west-1
+output = json
+mfa_serial = $YUBIKEY_MFA_ARN
+credential_process = aws-vault export --format=json dnlopes
+mfa_process = ykman oath accounts code --single $YUBIKEY_MFA_ARN
+
+[profile tpam-prd-ro]
+source_profile = dnlopes
+role_arn=arn:aws:iam::947961811347:role/ReadOnly
+
+[profile tpam-prd-admin]
+source_profile = dnlopes
+role_arn=arn:aws:iam::947961811347:role/OperatorAdmin
+
+[profile vetsoft-dev-ro]
+role_arn=arn:aws:iam::652570433615:role/ReadOnly
+source_profile=dnlopes
+
+[profile vetsoft-dev-operator]
+role_arn=arn:aws:iam::652570433615:role/OperatorAdmin
+source_profile=dnlopes
+
+[profile vetsoft-prd-ro]
+role_arn=arn:aws:iam::677020650900:role/ReadOnly
+source_profile=dnlopes
+
+[profile vetsoft-prd-operator]
+role_arn=arn:aws:iam::677020650900:role/OperatorAdmin
+source_profile=dnlopes
+
+[profile dns-ro]
+role_arn=arn:aws:iam::953744890837:role/ReadOnly
+source_profile=dnlopes
+
+[profile dns-operator]
+role_arn=arn:aws:iam::953744890837:role/OperatorAdmin
+source_profile=dnlopes
+
+[profile misc-ro]
+role_arn=arn:aws:iam::726291298705:role/ReadOnly
+source_profile=dnlopes
+
+[profile misc-operator]
+role_arn=arn:aws:iam::726291298705:role/OperatorAdmin
+source_profile=dnlopes
+
+[profile jumpbox-ro]
+role_arn=arn:aws:iam::211125360554:role/ReadOnly
+source_profile=dnlopes
+
+[profile jumpbox-operator]
+role_arn=arn:aws:iam::211125360554:role/JumpboxForAutomation
+source_profile=dnlopes

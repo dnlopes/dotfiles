@@ -1,0 +1,5 @@
+export GOPATH="$HOME/go"
+export PATH="$GOPATH:$HOME/go/bin:$PATH"
+
+# Yubikey + GPG + SSH authentication: https://jms1.net/yubikey/make-ssh-use-gpg-agent.md
+export AWS_VAULT_PROMPT="ykman" # for aws-vault

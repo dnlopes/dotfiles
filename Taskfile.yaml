@@ -2,6 +2,9 @@
 version: "3"
 run: once
 
+vars:
+  AWS_ROOT_ACCOUNT_ID: "156589501431" # the AWS root account id
+
 tasks:
   iam-keypair-rotate:
     desc: rotate the IAM keypair for my IAM user on the AWS root account
@@ -28,3 +31,21 @@ tasks:
     status:
       - "[[ ! -S $HOME/.rd/docker.sock ]]"
     cmd: docker system prune --volumes --force
+
+  register-yubikey-oath:
+    desc: register a new yubikey as a oath device on the AWS root account
+    interactive: true
+    silent: true
+    requires: { AWS_ROOT_ACCOUNT_ID }
+    cmd: |
+      deviceName=""
+      read -p "Enter device name: " deviceName
+      if [ -z "$deviceName" ]; then echo "device name cannot be empty" && echo ""; exit 1; fi
+      ykman oath accounts add arn:aws:iam::{{.AWS_ACCOUNT_ID}}:mfa/$deviceName
+      ykman oath accounts rename arn:aws:iam::{{.AWS_ACCOUNT_ID}}:mfa/$deviceName $deviceName
+
+  oath-code:
+    desc: generates a new oath code for the specified device
+    interactive: false
+    silent: true
+    cmd: ykman oath accounts code

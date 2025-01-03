@@ -16,13 +16,6 @@ dotfiles: ## distributes dotfiles
 setup: ## install/update software and configurations
 	bash setup-system.sh
 
-.PHONY: cleanup
-cleanup: ## cleanup system
-	bash cleanup.sh
-
 .PHONY: all
-all: setup dotfiles cleanup ## setup, dotfiles, and cleanup
+all: setup dotfiles ## setup, and dotfiles
 
-##@ System Management
-register-yubikey-oath: ## register a yubikey oath device on the root account
-	bash ./scripts/register-yubikey-oath.sh

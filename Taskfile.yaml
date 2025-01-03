@@ -7,3 +7,24 @@ tasks:
     desc: rotate the IAM keypair for my IAM user on the AWS root account
     cmds:
       - aws-vault rotate dnlopes
+
+  system-cleanup:
+    desc: system-wide cleanup of temporary files
+    cmds:
+      - task: brew-cleanup
+      - task: cleanup-tmp-files
+      - task: docker-cleanup
+
+  brew-cleanup:
+    internal: true
+    cmd: brew cleanup
+
+  cleanup-tmp-files:
+    internal: true
+    cmd: rm $HOME/.dotfiles-backups/*
+
+  docker-cleanup:
+    internal: true
+    status:
+      - "[[ ! -S $HOME/.rd/docker.sock ]]"
+    cmd: docker system prune --volumes --force

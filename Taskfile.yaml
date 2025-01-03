@@ -1,0 +1,9 @@
+# yaml-language-server: $schema=https://taskfile.dev/schema.json
+version: "3"
+run: once
+
+tasks:
+  iam-keypair-rotate:
+    desc: rotate the IAM keypair for my IAM user on the AWS root account
+    cmds:
+      - aws-vault rotate dnlopes

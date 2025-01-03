@@ -25,3 +25,6 @@ alias gf="git fetch"
 alias gcmsg="git commit -m"
 alias gs="git status"
 alias gp="git push"
+
+# go-task aliases
+alias gtask="task --global"

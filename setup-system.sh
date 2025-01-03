@@ -68,6 +68,7 @@ function installUpdateFormulas() {
     brew install trivy
     brew install operator-sdk
     brew install packer
+    brew install go-task
 }
 # end of main methods
 ########################

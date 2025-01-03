@@ -46,6 +46,4 @@ tasks:
 
   oath-code:
     desc: generates a new oath code for the specified device
-    interactive: false
-    silent: true
     cmd: ykman oath accounts code

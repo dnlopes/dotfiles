@@ -29,67 +29,72 @@ function echoWarning() {
 ########################
 # start of main methods
 function installUpdateCasks() {
-    brew install --cask aws-vault
-    brew install --cask firefox
-    brew install --cask font-fira-code
-    brew install --cask iterm2
-    brew install --cask rancher
-    brew install --cask spotify
-    brew install --cask visual-studio-code
-    brew install --cask maccy
-    brew install --cask whatsapp
-    brew install --cask slack
-    brew install --cask discord
-    brew install --cask drawio
-    brew install --cask proton-mail
-    brew install --cask proton-pass
-    brew install --cask protonvpn
+    brew upgrade --cask aws-vault
+    brew upgrade --cask firefox
+    brew upgrade --cask font-fira-code
+    brew upgrade --cask iterm2
+    brew upgrade --cask rancher
+    brew upgrade --cask spotify
+    brew upgrade --cask visual-studio-code
+    brew upgrade --cask maccy
+    brew upgrade --cask whatsapp
+    brew upgrade --cask slack
+    brew upgrade --cask discord
+    brew upgrade --cask drawio
+    brew upgrade --cask proton-mail
+    brew upgrade --cask proton-pass
+    brew upgrade --cask protonvpn
 }
 
 function installUpdateFormulas() {
-    #brew update
-    brew install coreutils
-    brew install pinentry-mac
-    brew install pre-commit
-    brew install fzf
-    brew install fluxcd/tap/flux
-    brew install awscli
-    brew install azure-cli
-    brew install kubernetes-cli
-    brew install kyverno
-    brew install chainsaw
-    brew install localstack/tap/localstack-cli
-    brew install vim
-    brew install ykman    
-    brew install yq    
-    brew install gnu-getopt
-    brew install gnupg
-    brew install helm
-    brew install k3d
-    brew install k9s
-    brew install jq
-    brew install pyenv
-    brew install starship
-    brew install opentofu
-    brew install pre-commit
-    brew install trivy
-    brew install operator-sdk
-    brew install packer
-    brew install go-task
+    brew update
+    brew upgrade coreutils
+    brew upgrade pinentry-mac
+    brew upgrade pre-commit
+    brew upgrade fzf
+    brew upgrade fluxcd/tap/flux
+    brew upgrade awscli
+    brew upgrade azure-cli
+    brew upgrade kubernetes-cli
+    brew upgrade kyverno
+    brew upgrade chainsaw
+    brew upgrade localstack/tap/localstack-cli
+    brew upgrade vim
+    brew upgrade ykman    
+    brew upgrade yq    
+    brew upgrade gnu-getopt
+    brew upgrade gnupg
+    brew upgrade helm
+    brew upgrade k3d
+    brew upgrade k9s
+    brew upgrade jq
+    brew upgrade pyenv
+    brew upgrade starship
+    brew upgrade opentofu
+    brew upgrade pre-commit
+    brew upgrade trivy
+    brew upgrade operator-sdk
+    brew upgrade packer
+    brew upgrade go-task
+}
+
+function setupPython() {
+    pyenv install 3.12 --skip-existing
+    echoSuccess "python 3.12 installed successfully"
+    pyenv install 3.13 --skip-existing
+    echoSuccess "python 3.13 installed successfully"
+    pyenv global 3.12
+    echoSuccess "python 3.12 is now the default version"
 }
 # end of main methods
 ########################
-
 
 function main() {
     echoInfo "starting reconciling configurations" && echo ""
 
     installUpdateFormulas
     installUpdateCasks
-
-    pyenv install 3.12 --skip-existing
-    pyenv install 3.13 --skip-existing
-    pyenv global 3.12
+    setupPython   
     
     echo "" && echoSuccess "configurations reconciled successfully"
 }

@@ -31,9 +31,8 @@ eval "$(starship init zsh)"
 
 ##############################
 # start PyEnv stuff
-export PYENV_VERSION="3.12"
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+eval "$(pyenv init - zsh)"
 # end PyEnv stuff
 ##############################

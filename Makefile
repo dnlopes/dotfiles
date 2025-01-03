@@ -10,11 +10,11 @@ help:
 ##@ Targets
 .PHONY: dotfiles
 dotfiles: ## distributes dotfiles
-	bash dotfiles.sh
+	bash ./scripts/dotfiles.sh
 
 .PHONY: setup
 setup: ## install/update software and configurations
-	bash setup-system.sh
+	bash ./scripts/setup-system.sh
 
 .PHONY: all
 all: setup dotfiles ## setup, and dotfiles

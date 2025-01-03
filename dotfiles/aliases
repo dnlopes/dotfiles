@@ -28,3 +28,4 @@ alias gp="git push"
 
 # go-task aliases
 alias gtask="task --global"
+alias gtaskls="task --global --list"

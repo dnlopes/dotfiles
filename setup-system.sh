@@ -37,6 +37,13 @@ function installUpdateCasks() {
     brew install --cask spotify
     brew install --cask visual-studio-code
     brew install --cask maccy
+    brew install --cask whatsapp
+    brew install --cask slack
+    brew install --cask discord
+    brew install --cask drawio
+    brew install --cask proton-mail
+    brew install --cask proton-pass
+    brew install --cask protonvpn
 }
 
 function installUpdateFormulas() {

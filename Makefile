@@ -22,3 +22,7 @@ cleanup: ## cleanup system
 
 .PHONY: all
 all: setup dotfiles cleanup ## setup, dotfiles, and cleanup
+
+##@ System Management
+register-yubikey-oath: ## register a yubikey oath device on the root account
+	bash ./scripts/register-yubikey-oath.sh

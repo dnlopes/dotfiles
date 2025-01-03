@@ -6,7 +6,7 @@ dotFilesFolder="$HOME/.dotfiles"
 
 ##############################
 # start of miscellaneous configurations
-[ -f $HOME/.fzf.zsh ] && source ~/.fzf.zsh
+source <(fzf --zsh)
 # end of miscellaneous configurations
 ##############################
 

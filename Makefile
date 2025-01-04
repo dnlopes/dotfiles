@@ -1,7 +1,6 @@
 SHELL = /usr/bin/env bash -o pipefail
 .SHELLFLAGS = -ec
 .DEFAULT_GOAL := help
-PROJECT_DIR := $(shell dirname $(abspath $(lastword $(MAKEFILE_LIST))))
 
 .PHONY: help
 help:

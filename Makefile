@@ -18,4 +18,3 @@ setup: ## install/update software and configurations
 
 .PHONY: all
 all: setup dotfiles ## setup, and dotfiles
-

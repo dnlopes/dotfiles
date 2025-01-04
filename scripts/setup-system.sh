@@ -61,8 +61,8 @@ function installUpdateFormulas() {
     brew install chainsaw
     brew install localstack/tap/localstack-cli
     brew install vim
-    brew install ykman    
-    brew install yq    
+    brew install ykman
+    brew install yq
     brew install gnu-getopt
     brew install gnupg
     brew install helm
@@ -94,8 +94,8 @@ function main() {
 
     installUpdateFormulas
     installUpdateCasks
-    setupPython   
-    
+    setupPython
+
     echo "" && echoSuccess "configurations reconciled successfully"
 }
 
